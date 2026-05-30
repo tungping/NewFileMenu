@@ -1,5 +1,9 @@
 # NewFileMenu
 
+<p align="right">
+  <a href="./README_EN.md">English</a>
+</p>
+
 NewFileMenu 是一个自用优先的 macOS 工具，用 Finder Sync Extension 在 Finder 右键菜单里添加“新建文本文件”。目标体验接近 Windows 的“右键 > 新建 > 文本文档”。
 
 ## 功能
