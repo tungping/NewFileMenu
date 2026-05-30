@@ -1,0 +1,18 @@
+# Xcode 编译产物与缓存
+.DerivedData/
+build/
+*.moved-aside
+*.xcuserstate
+
+# Xcode 用户特定设置（避免覆盖个人排版）
+xcuserdata/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Swift Package Manager (SPM) 编译产物
+.build/
+.swiftpm/
+
+# 操作系统临时文件
+.DS_Store

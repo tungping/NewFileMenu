@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000101 /* NewFileMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000201 /* NewFileMenuApp.swift */; };
+		000000000000000000000102 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000202 /* SettingsView.swift */; };
+		000000000000000000000103 /* FolderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000203 /* FolderListView.swift */; };
+		000000000000000000000104 /* ExtensionHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000204 /* ExtensionHelpView.swift */; };
+		000000000000000000000121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000207 /* AppDelegate.swift */; };
+		000000000000000000000127 /* AppWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000020D /* AppWindowController.swift */; };
+		000000000000000000000105 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000401 /* Constants.swift */; };
+		000000000000000000000106 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000402 /* Preferences.swift */; };
+		000000000000000000000107 /* FileCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000403 /* FileCreator.swift */; };
+		000000000000000000000108 /* FilenameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000404 /* FilenameGenerator.swift */; };
+		00000000000000000000010B /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000407 /* AppStrings.swift */; };
+		00000000000000000000010C /* PreferenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000408 /* PreferenceStore.swift */; };
+		00000000000000000000010D /* UserDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000409 /* UserDirectories.swift */; };
+		000000000000000000000111 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000301 /* FinderSync.swift */; };
+		000000000000000000000112 /* MenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000302 /* MenuBuilder.swift */; };
+		000000000000000000000113 /* TargetDirectoryResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000303 /* TargetDirectoryResolver.swift */; };
+		000000000000000000000115 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000401 /* Constants.swift */; };
+		000000000000000000000116 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000402 /* Preferences.swift */; };
+		000000000000000000000117 /* FileCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000403 /* FileCreator.swift */; };
+		000000000000000000000118 /* FilenameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000404 /* FilenameGenerator.swift */; };
+		00000000000000000000011C /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000407 /* AppStrings.swift */; };
+		00000000000000000000011D /* PreferenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000408 /* PreferenceStore.swift */; };
+		00000000000000000000011E /* UserDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000409 /* UserDirectories.swift */; };
+		000000000000000000000119 /* NewFileMenuFinderExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 000000000000000000000902 /* NewFileMenuFinderExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		000000000000000000000701 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000602;
+			remoteInfo = NewFileMenuFinderExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00000000000000000000A004 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				000000000000000000000119 /* NewFileMenuFinderExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000201 /* NewFileMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFileMenuApp.swift; sourceTree = "<group>"; };
+		000000000000000000000202 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		000000000000000000000203 /* FolderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListView.swift; sourceTree = "<group>"; };
+		000000000000000000000204 /* ExtensionHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpView.swift; sourceTree = "<group>"; };
+		000000000000000000000205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000206 /* NewFileMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewFileMenu.entitlements; sourceTree = "<group>"; };
+		000000000000000000000207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00000000000000000000020D /* AppWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowController.swift; sourceTree = "<group>"; };
+		000000000000000000000301 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		000000000000000000000302 /* MenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBuilder.swift; sourceTree = "<group>"; };
+		000000000000000000000303 /* TargetDirectoryResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDirectoryResolver.swift; sourceTree = "<group>"; };
+		000000000000000000000305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000306 /* NewFileMenuFinderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewFileMenuFinderExtension.entitlements; sourceTree = "<group>"; };
+		000000000000000000000401 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		000000000000000000000402 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		000000000000000000000403 /* FileCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCreator.swift; sourceTree = "<group>"; };
+		000000000000000000000404 /* FilenameGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameGenerator.swift; sourceTree = "<group>"; };
+		000000000000000000000407 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		000000000000000000000408 /* PreferenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStore.swift; sourceTree = "<group>"; };
+		000000000000000000000409 /* UserDirectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDirectories.swift; sourceTree = "<group>"; };
+		000000000000000000000501 /* App.entitlements.example */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements.example; sourceTree = "<group>"; };
+		000000000000000000000502 /* FinderExtension.entitlements.example */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinderExtension.entitlements.example; sourceTree = "<group>"; };
+		000000000000000000000503 /* FinderExtension.Info.plist.example */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FinderExtension.Info.plist.example; sourceTree = "<group>"; };
+		000000000000000000000801 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		000000000000000000000802 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		000000000000000000000901 /* NewFileMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewFileMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000902 /* NewFileMenuFinderExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewFileMenuFinderExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00000000000000000000A002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000A012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000010 /* NewFileMenuApp */,
+				000000000000000000000020 /* NewFileMenuFinderExtension */,
+				000000000000000000000030 /* Shared */,
+				000000000000000000000040 /* ConfigExamples */,
+				000000000000000000000801 /* Package.swift */,
+				000000000000000000000802 /* README.md */,
+				000000000000000000000090 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000010 /* NewFileMenuApp */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000201 /* NewFileMenuApp.swift */,
+				000000000000000000000202 /* SettingsView.swift */,
+				000000000000000000000203 /* FolderListView.swift */,
+				000000000000000000000204 /* ExtensionHelpView.swift */,
+				000000000000000000000207 /* AppDelegate.swift */,
+				00000000000000000000020D /* AppWindowController.swift */,
+				000000000000000000000205 /* Info.plist */,
+				000000000000000000000206 /* NewFileMenu.entitlements */,
+			);
+			path = NewFileMenuApp;
+			sourceTree = "<group>";
+		};
+		000000000000000000000020 /* NewFileMenuFinderExtension */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000301 /* FinderSync.swift */,
+				000000000000000000000302 /* MenuBuilder.swift */,
+				000000000000000000000303 /* TargetDirectoryResolver.swift */,
+				000000000000000000000305 /* Info.plist */,
+				000000000000000000000306 /* NewFileMenuFinderExtension.entitlements */,
+			);
+			path = NewFileMenuFinderExtension;
+			sourceTree = "<group>";
+		};
+		000000000000000000000030 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000401 /* Constants.swift */,
+				000000000000000000000402 /* Preferences.swift */,
+				000000000000000000000403 /* FileCreator.swift */,
+				000000000000000000000404 /* FilenameGenerator.swift */,
+				000000000000000000000407 /* AppStrings.swift */,
+				000000000000000000000408 /* PreferenceStore.swift */,
+				000000000000000000000409 /* UserDirectories.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		000000000000000000000040 /* ConfigExamples */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000501 /* App.entitlements.example */,
+				000000000000000000000502 /* FinderExtension.entitlements.example */,
+				000000000000000000000503 /* FinderExtension.Info.plist.example */,
+			);
+			path = ConfigExamples;
+			sourceTree = "<group>";
+		};
+		000000000000000000000090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000901 /* NewFileMenu.app */,
+				000000000000000000000902 /* NewFileMenuFinderExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000601 /* NewFileMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000611 /* Build configuration list for PBXNativeTarget "NewFileMenu" */;
+			buildPhases = (
+				00000000000000000000A001 /* Sources */,
+				00000000000000000000A002 /* Frameworks */,
+				00000000000000000000A003 /* Resources */,
+				00000000000000000000A004 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000000000000000702 /* PBXTargetDependency */,
+			);
+			name = NewFileMenu;
+			productName = NewFileMenu;
+			productReference = 000000000000000000000901 /* NewFileMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000602 /* NewFileMenuFinderExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000621 /* Build configuration list for PBXNativeTarget "NewFileMenuFinderExtension" */;
+			buildPhases = (
+				00000000000000000000A011 /* Sources */,
+				00000000000000000000A012 /* Frameworks */,
+				00000000000000000000A013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewFileMenuFinderExtension;
+			productName = NewFileMenuFinderExtension;
+			productReference = 000000000000000000000902 /* NewFileMenuFinderExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					000000000000000000000601 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					000000000000000000000602 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = 000000000000000000000610 /* Build configuration list for PBXProject "NewFileMenu" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000002;
+			productRefGroup = 000000000000000000000090 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000601 /* NewFileMenu */,
+				000000000000000000000602 /* NewFileMenuFinderExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00000000000000000000A003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000A013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00000000000000000000A001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000101 /* NewFileMenuApp.swift in Sources */,
+				000000000000000000000102 /* SettingsView.swift in Sources */,
+				000000000000000000000103 /* FolderListView.swift in Sources */,
+				000000000000000000000104 /* ExtensionHelpView.swift in Sources */,
+				000000000000000000000121 /* AppDelegate.swift in Sources */,
+				000000000000000000000127 /* AppWindowController.swift in Sources */,
+				000000000000000000000105 /* Constants.swift in Sources */,
+				000000000000000000000106 /* Preferences.swift in Sources */,
+				000000000000000000000107 /* FileCreator.swift in Sources */,
+				000000000000000000000108 /* FilenameGenerator.swift in Sources */,
+				00000000000000000000010B /* AppStrings.swift in Sources */,
+				00000000000000000000010C /* PreferenceStore.swift in Sources */,
+				00000000000000000000010D /* UserDirectories.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000A011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000111 /* FinderSync.swift in Sources */,
+				000000000000000000000112 /* MenuBuilder.swift in Sources */,
+				000000000000000000000113 /* TargetDirectoryResolver.swift in Sources */,
+				000000000000000000000115 /* Constants.swift in Sources */,
+				000000000000000000000116 /* Preferences.swift in Sources */,
+				000000000000000000000117 /* FileCreator.swift in Sources */,
+				000000000000000000000118 /* FilenameGenerator.swift in Sources */,
+				00000000000000000000011C /* AppStrings.swift in Sources */,
+				00000000000000000000011D /* PreferenceStore.swift in Sources */,
+				00000000000000000000011E /* UserDirectories.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000000000000000000000702 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000602 /* NewFileMenuFinderExtension */;
+			targetProxy = 000000000000000000000701 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000000000000000000000613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000000000000000614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NewFileMenuApp/NewFileMenu.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7S3B5SB6R8;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NewFileMenuApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tungping.NewFileMenu;
+				PRODUCT_NAME = NewFileMenu;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NewFileMenuApp/NewFileMenu.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7S3B5SB6R8;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NewFileMenuApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tungping.NewFileMenu;
+				PRODUCT_NAME = NewFileMenu;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		000000000000000000000624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = NewFileMenuFinderExtension/NewFileMenuFinderExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7S3B5SB6R8;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NewFileMenuFinderExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tungping.NewFileMenu.FinderExtension;
+				PRODUCT_NAME = NewFileMenuFinderExtension;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = appex;
+			};
+			name = Debug;
+		};
+		000000000000000000000625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = NewFileMenuFinderExtension/NewFileMenuFinderExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7S3B5SB6R8;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NewFileMenuFinderExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tungping.NewFileMenu.FinderExtension;
+				PRODUCT_NAME = NewFileMenuFinderExtension;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = appex;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000610 /* Build configuration list for PBXProject "NewFileMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000612 /* Debug */,
+				000000000000000000000613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000611 /* Build configuration list for PBXNativeTarget "NewFileMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000614 /* Debug */,
+				000000000000000000000615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000621 /* Build configuration list for PBXNativeTarget "NewFileMenuFinderExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000624 /* Debug */,
+				000000000000000000000625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
