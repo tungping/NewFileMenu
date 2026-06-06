@@ -11,26 +11,24 @@ struct SettingsView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
-                FolderListView(
-                    folders: $model.preferences.monitoredFolderURLs,
-                    selection: $selectedFolderURLs,
-                    onAdd: model.addFolder,
-                    onRemove: { model.removeFolders(selectedFolderURLs) },
-                    onRestoreDefaults: {
-                        model.restoreDefaultFolders()
-                        selectedFolderURLs.removeAll()
-                    },
-                    strings: strings
-                )
+        VStack(alignment: .leading, spacing: 12) {
+            FolderListView(
+                folders: $model.preferences.monitoredFolderURLs,
+                selection: $selectedFolderURLs,
+                onAdd: model.addFolder,
+                onRemove: { model.removeFolders(selectedFolderURLs) },
+                onRestoreDefaults: {
+                    model.restoreDefaultFolders()
+                    selectedFolderURLs.removeAll()
+                },
+                strings: strings
+            )
 
-                fileDefaultsSection
-                quitSection
-            }
-            .padding(16)
+            fileDefaultsSection
+            quitSection
         }
-        .frame(width: 440, height: 350)
+        .padding(16)
+        .frame(width: 440, height: 360)
     }
 
     private var fileDefaultsSection: some View {
