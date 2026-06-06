@@ -71,6 +71,24 @@ public enum Preferences {
 
     public static func ensureDefaults() {
         let persisted = PreferenceStore.loadDictionary()
+        ensureDefaults(merging: persisted)
+    }
+
+    /// Accepts a pre-loaded preferences snapshot to avoid a redundant plist read.
+    public static func ensureDefaults(from loaded: NewFilePreferences) {
+        // Re-encode the loaded preferences into the same dictionary shape so we can
+        // check for missing keys without a second plist read.
+        let persisted: [String: Any] = [
+            Constants.PreferenceKeys.monitoredFolderURLs: loaded.monitoredFolderURLs.map { $0.standardizedFileURL.path },
+            Constants.PreferenceKeys.defaultBaseName: loaded.defaultBaseName,
+            Constants.PreferenceKeys.defaultExtension: loaded.defaultExtension,
+            Constants.PreferenceKeys.defaultContent: loaded.defaultContent,
+            Constants.PreferenceKeys.menuDisplayText: loaded.menuDisplayText
+        ]
+        ensureDefaults(merging: persisted)
+    }
+
+    private static func ensureDefaults(merging persisted: [String: Any]) {
         var merged = persisted
         var didChange = persisted.isEmpty
 

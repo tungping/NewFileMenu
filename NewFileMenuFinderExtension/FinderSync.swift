@@ -10,8 +10,9 @@ final class FinderSync: FIFinderSync {
 
     override init() {
         super.init()
-        Preferences.ensureDefaults()
-        refreshMonitoredDirectories(force: true)
+        let preferences = Preferences.load()
+        Preferences.ensureDefaults(from: preferences)
+        refreshMonitoredDirectories(preferences: preferences, force: true)
     }
 
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
@@ -48,7 +49,7 @@ final class FinderSync: FIFinderSync {
     }
 
     private func refreshMonitoredDirectories(
-        preferences: NewFilePreferences = Preferences.load(),
+        preferences: NewFilePreferences,
         force: Bool = false
     ) {
         let folderURLs = Set(preferences.monitoredFolderURLs)

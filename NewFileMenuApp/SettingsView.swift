@@ -6,9 +6,7 @@ struct SettingsView: View {
     @StateObject private var model = SettingsViewModel()
     @State private var selectedFolderURLs = Set<URL>()
 
-    private var strings: AppStrings {
-        AppStrings(language: .systemLanguage)
-    }
+    private let strings = AppStrings(language: .systemLanguage)
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -92,8 +90,9 @@ final class SettingsViewModel: ObservableObject {
     }
 
     func addFolder() {
+        let strings = AppStrings(language: .systemLanguage)
         let panel = NSOpenPanel()
-        panel.title = AppStrings(language: .systemLanguage).folderPanelTitle
+        panel.title = strings.folderPanelTitle
         panel.canChooseFiles = false
         panel.canChooseDirectories = true
         panel.allowsMultipleSelection = true

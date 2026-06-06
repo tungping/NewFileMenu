@@ -43,6 +43,6 @@ final class FilenameGeneratorTests: XCTestCase {
             fileExtension: ".md"
         )
 
-        XCTAssertEqual(url.lastPathComponent, "New Text File.md")
+        XCTAssertEqual(url.lastPathComponent, "untitled.md")
     }
 }

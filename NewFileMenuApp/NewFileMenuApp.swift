@@ -4,9 +4,7 @@ import SwiftUI
 struct NewFileMenuApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
-    private var menuStrings: AppStrings {
-        AppStrings(language: .systemLanguage)
-    }
+    private let menuStrings = AppStrings(language: .systemLanguage)
 
     init() {
         Preferences.ensureDefaults()

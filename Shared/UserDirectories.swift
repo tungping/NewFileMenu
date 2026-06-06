@@ -16,9 +16,8 @@ public enum UserDirectories {
         return FileManager.default.homeDirectoryForCurrentUser
     }()
 
-    public static var applicationSupportDirectory: URL {
+    public static let applicationSupportDirectory: URL =
         homeDirectory
             .appendingPathComponent("Library", isDirectory: true)
             .appendingPathComponent("Application Support", isDirectory: true)
-    }
 }

@@ -11,7 +11,7 @@ public enum FilenameGenerator {
         let normalizedExtension = normalizedExtension(fileExtension)
 
         var suffix = 1
-        while true {
+        while suffix <= 9999 {
             let candidateBaseName = suffix == 1
                 ? normalizedBaseName
                 : "\(normalizedBaseName) \(suffix)"
@@ -27,6 +27,10 @@ public enum FilenameGenerator {
 
             suffix += 1
         }
+
+        // Fallback: return a UUID-based name if every numbered candidate was taken.
+        let fallbackName = fileName(baseName: "\(normalizedBaseName) \(UUID().uuidString)", fileExtension: normalizedExtension)
+        return directoryURL.appendingPathComponent(fallbackName, isDirectory: false)
     }
 
     private static func normalizedBaseName(_ value: String) -> String {

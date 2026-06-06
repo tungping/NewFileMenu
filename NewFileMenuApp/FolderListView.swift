@@ -14,7 +14,7 @@ struct FolderListView: View {
             VStack(spacing: 8) {
                 List(selection: $selection) {
                     ForEach(folders, id: \.self) { folder in
-                        Label(folder.path, systemImage: "folder")
+                        Label(folder.path(percentEncoded: false), systemImage: "folder")
                             .lineLimit(1)
                             .tag(folder)
                     }
