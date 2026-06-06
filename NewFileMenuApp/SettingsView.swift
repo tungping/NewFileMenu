@@ -65,6 +65,11 @@ struct SettingsView: View {
     private var fileDefaultsSection: some View {
         GroupBox(strings.fileDefaultsTitle) {
             VStack(alignment: .leading, spacing: 8) {
+                LabeledContent(strings.menuDisplayTextLabel) {
+                    TextField("", text: $model.preferences.menuDisplayText)
+                        .textFieldStyle(.roundedBorder)
+                }
+
                 LabeledContent(strings.defaultBaseName) {
                     TextField("", text: $model.preferences.defaultBaseName)
                         .textFieldStyle(.roundedBorder)

@@ -4,7 +4,7 @@ struct MenuBuilder {
     let preferences: NewFilePreferences
 
     func makeMenu(target: AnyObject, action: Selector) -> NSMenu {
-        let labels = MenuLabels(language: preferences.menuLanguage, baseName: preferences.defaultBaseName)
+        let labels = MenuLabels(language: preferences.menuLanguage, menuDisplayText: preferences.menuDisplayText)
         let menu = NSMenu(title: "")
 
         if preferences.preferSubmenu {
@@ -33,12 +33,11 @@ private struct MenuLabels {
     let parentTitle: String
     let childTitle: String
 
-    init(language: MenuLanguage, baseName: String) {
+    init(language: MenuLanguage, menuDisplayText: String) {
         let strings = AppStrings(language: language)
-        // Use the user-configured baseName as the menu item label so that
-        // the Finder menu label is consistent with what is shown in Settings.
-        singleItemTitle = baseName
+        // Use the user-configured menuDisplayText as the menu item label.
+        singleItemTitle = menuDisplayText
         parentTitle = strings.newFile
-        childTitle = baseName
+        childTitle = menuDisplayText
     }
 }

@@ -27,6 +27,7 @@ public struct NewFilePreferences: Equatable {
     public var defaultBaseName: String
     public var defaultExtension: String
     public var defaultContent: String
+    public var menuDisplayText: String
     public var shouldRevealFile: Bool
     public var menuLanguage: MenuLanguage
     public var preferSubmenu: Bool
@@ -36,6 +37,7 @@ public struct NewFilePreferences: Equatable {
         defaultBaseName: String = Constants.defaultBaseName,
         defaultExtension: String = Constants.defaultFileExtension,
         defaultContent: String = "",
+        menuDisplayText: String = Constants.defaultMenuDisplayText,
         shouldRevealFile: Bool = true,
         menuLanguage: MenuLanguage = .simplifiedChinese,
         preferSubmenu: Bool = false
@@ -44,6 +46,7 @@ public struct NewFilePreferences: Equatable {
         self.defaultBaseName = defaultBaseName
         self.defaultExtension = defaultExtension
         self.defaultContent = defaultContent
+        self.menuDisplayText = menuDisplayText
         self.shouldRevealFile = shouldRevealFile
         self.menuLanguage = menuLanguage
         self.preferSubmenu = preferSubmenu
@@ -57,6 +60,7 @@ public enum Preferences {
             Constants.PreferenceKeys.defaultBaseName: Constants.defaultBaseName,
             Constants.PreferenceKeys.defaultExtension: Constants.defaultFileExtension,
             Constants.PreferenceKeys.defaultContent: "",
+            Constants.PreferenceKeys.menuDisplayText: Constants.defaultMenuDisplayText,
             Constants.PreferenceKeys.shouldRevealFile: true,
             Constants.PreferenceKeys.menuLanguage: MenuLanguage.simplifiedChinese.rawValue,
             Constants.PreferenceKeys.preferSubmenu: false
@@ -94,6 +98,7 @@ public enum Preferences {
             defaultBaseName: values[Constants.PreferenceKeys.defaultBaseName] as? String ?? Constants.defaultBaseName,
             defaultExtension: values[Constants.PreferenceKeys.defaultExtension] as? String ?? Constants.defaultFileExtension,
             defaultContent: values[Constants.PreferenceKeys.defaultContent] as? String ?? "",
+            menuDisplayText: values[Constants.PreferenceKeys.menuDisplayText] as? String ?? Constants.defaultMenuDisplayText,
             shouldRevealFile: values[Constants.PreferenceKeys.shouldRevealFile] as? Bool ?? true,
             menuLanguage: language,
             preferSubmenu: values[Constants.PreferenceKeys.preferSubmenu] as? Bool ?? false
@@ -106,6 +111,7 @@ public enum Preferences {
             Constants.PreferenceKeys.defaultBaseName: preferences.defaultBaseName,
             Constants.PreferenceKeys.defaultExtension: preferences.defaultExtension,
             Constants.PreferenceKeys.defaultContent: preferences.defaultContent,
+            Constants.PreferenceKeys.menuDisplayText: preferences.menuDisplayText,
             Constants.PreferenceKeys.shouldRevealFile: preferences.shouldRevealFile,
             Constants.PreferenceKeys.menuLanguage: preferences.menuLanguage.rawValue,
             Constants.PreferenceKeys.preferSubmenu: preferences.preferSubmenu

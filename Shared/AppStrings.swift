@@ -12,6 +12,7 @@ public struct AppStrings {
     public let defaultBaseName: String
     public let defaultExtension: String
     public let defaultContent: String
+    public let menuDisplayTextLabel: String
     public let finderMenuBehaviorTitle: String
     public let revealAfterCreate: String
     public let preferSubmenu: String
@@ -38,6 +39,7 @@ public struct AppStrings {
             defaultBaseName = "Default File Name"
             defaultExtension = "Default Extension"
             defaultContent = "Default File Content"
+            menuDisplayTextLabel = "Menu Item Label"
             finderMenuBehaviorTitle = "Finder Menu Behavior"
             revealAfterCreate = "Reveal file after creating"
             preferSubmenu = "Prefer submenu"
@@ -61,6 +63,7 @@ public struct AppStrings {
             defaultBaseName = "默认文件名"
             defaultExtension = "默认扩展名"
             defaultContent = "默认文件内容"
+            menuDisplayTextLabel = "菜单项名称"
             finderMenuBehaviorTitle = "Finder 菜单行为"
             revealAfterCreate = "创建后选中文件"
             preferSubmenu = "优先使用子菜单"
@@ -84,6 +87,7 @@ public struct AppStrings {
             defaultBaseName = "預設檔案名稱"
             defaultExtension = "預設副檔名"
             defaultContent = "預設檔案內容"
+            menuDisplayTextLabel = "選單項目名稱"
             finderMenuBehaviorTitle = "Finder 選單行為"
             revealAfterCreate = "建立後選取檔案"
             preferSubmenu = "優先使用子選單"
