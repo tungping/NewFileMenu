@@ -8,15 +8,14 @@ NewFileMenu 是一个自用优先的 macOS 工具，用 Finder Sync Extension �
 
 ## 功能
 
-- Finder 右键菜单：`新建文本文件`
-- 可选子菜单：`新建文件 > 文本文档`
+- Finder 右键菜单：自定义的新建文件操作项（默认菜单文本为 `New Text File`）
 - 右键当前文件夹空白处：在当前 Finder 容器目录创建文件
 - 右键文件夹：在该文件夹内部创建文件
 - 右键普通文件：在该文件所在父目录创建文件
 - 多选时优先使用 `selectedItemURLs().first`
-- 默认文件名：`New Text File.txt`
-- 自动去重：`New Text File 2.txt`、`New Text File 3.txt`
-- 创建成功后默认让 Finder 显示并选中新文件
+- 默认创建文件名：`untitled.txt`
+- 自动去重：`untitled 2.txt`、`untitled 3.txt`
+- 创建成功后自动在 Finder 中显示并选中新文件
 - 主 App 不显示 Dock 图标，常驻菜单栏，可从菜单栏图标打开设置或退出
 - 默认监控用户 Home 目录，可在设置页添加额外目录
 
@@ -135,7 +134,7 @@ killall Finder
 
 主 App 不启用 Sandbox，也不使用 Security-Scoped Bookmarks。Finder Sync Extension 需要启用 App Sandbox 才能被 macOS 正常注册和启用；为满足自用场景下的直接文件创建，扩展使用 temporary exception entitlements 覆盖用户 Home 和 `/Volumes`。只要当前用户对目标目录有写权限，扩展会尝试直接创建文件。
 
-设置页中的“菜单语言”支持 English、简体中文、繁體中文，并会同步影响主 App 设置页、菜单栏菜单和 Finder 右键菜单文字。
+应用会自动检测系统语言，支持 English、简体中文、繁體中文；若系统语言不在支持列表中，则默认以 English 显示。
 
 未签名二进制分发可能遇到 Gatekeeper 和 Finder Extension 加载问题。这个项目更适合以源码形式分享，由使用者自行编译运行。
 
@@ -162,8 +161,6 @@ Finder Extension 是沙盒进程，代码会通过当前用户账号记录解析
 - `defaultBaseName`
 - `defaultExtension`
 - `defaultContent`
-- `shouldRevealFile`
-- `menuLanguage`
-- `preferSubmenu`
+- `menuDisplayText`
 
 默认监控目录是当前用户 Home 目录，通常覆盖 Desktop、Documents、Downloads 和大部分用户目录。外置硬盘、iCloud Drive、项目目录等可以在设置页手动添加。

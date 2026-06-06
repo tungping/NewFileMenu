@@ -8,15 +8,14 @@ NewFileMenu is a self-use-first macOS utility that uses a Finder Sync Extension 
 
 ## Features
 
-- Finder right-click context menu: `New Text File`
-- Optional submenu: `New File > Text Document`
+- Finder right-click context menu: Customizable new file action item (default menu text is `New Text File`)
 - Right-click blank space in the current folder: Creates a file in the current Finder container directory.
 - Right-click a folder: Creates a file inside that folder.
 - Right-click a regular file: Creates a file in the parent directory of that file.
 - In multi-selection, prioritizes using `selectedItemURLs().first`.
-- Default filename: `New Text File.txt`.
-- Automatic deduplication: `New Text File 2.txt`, `New Text File 3.txt`, etc.
-- By default, reveals and selects the newly created file in Finder.
+- Default created filename: `untitled.txt`.
+- Automatic deduplication: `untitled 2.txt`, `untitled 3.txt`, etc.
+- Automatically reveals and selects the newly created file in Finder.
 - The main App does not show a Dock icon and runs constantly in the menu bar. The settings can be opened, or the app can be quit, from the menu bar icon.
 - Monitors the user's Home directory by default; additional directories can be added in the settings page.
 
@@ -135,7 +134,7 @@ Then reopen a Finder window and right-click on the target directory or file.
 
 The main App does not enable Sandbox, nor does it use Security-Scoped Bookmarks. The Finder Sync Extension must have App Sandbox enabled to be properly registered and loaded by macOS. To satisfy direct file creation in self-use scenarios, the extension uses temporary exception entitlements to cover the user's Home and `/Volumes/`. As long as the current user has write permissions for the target directory, the extension will attempt to create the file directly.
 
-The "Menu Language" in the settings page supports English, Simplified Chinese, and Traditional Chinese. Changing it will simultaneously update the UI of the main App settings page, the menu bar menu, and the Finder right-click menu items.
+The App automatically detects the system language, supporting English, Simplified Chinese, and Traditional Chinese. If the system language is not one of these, it defaults to English.
 
 Unsigned binary distribution may run into Gatekeeper and Finder Extension loading issues. This project is more suitable for sharing in source code form, to be built and run by the users themselves.
 
@@ -162,8 +161,6 @@ Shared fields include:
 - `defaultBaseName`
 - `defaultExtension`
 - `defaultContent`
-- `shouldRevealFile`
-- `menuLanguage`
-- `preferSubmenu`
+- `menuDisplayText`
 
 The default monitored directory is the current user's Home directory, which usually covers Desktop, Documents, Downloads, and most user directories. External drives, iCloud Drive, project directories, etc., can be manually added in the settings page.
