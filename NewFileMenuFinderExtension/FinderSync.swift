@@ -39,9 +39,7 @@ final class FinderSync: FIFinderSync {
                 preferences: preferences
             )
 
-            if preferences.shouldRevealFile {
-                NSWorkspace.shared.activateFileViewerSelecting([createdFileURL])
-            }
+            NSWorkspace.shared.activateFileViewerSelecting([createdFileURL])
 
             logger.info("Created file: \(createdFileURL.path, privacy: .public)")
         } catch {

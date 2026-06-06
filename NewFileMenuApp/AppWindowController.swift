@@ -24,7 +24,7 @@ final class AppWindowController: NSObject, NSWindowDelegate {
         }
 
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 680, height: 340),
+            contentRect: NSRect(x: 0, y: 0, width: 600, height: 310),
             styleMask: [.titled, .closable, .miniaturizable],
             backing: .buffered,
             defer: false

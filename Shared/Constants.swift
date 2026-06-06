@@ -13,9 +13,7 @@ public enum Constants {
         public static let defaultExtension = "defaultExtension"
         public static let defaultContent = "defaultContent"
         public static let menuDisplayText = "menuDisplayText"
-        public static let shouldRevealFile = "shouldRevealFile"
         public static let menuLanguage = "menuLanguage"
-        public static let preferSubmenu = "preferSubmenu"
     }
 
     public enum Notifications {

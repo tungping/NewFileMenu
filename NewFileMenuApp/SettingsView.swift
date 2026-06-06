@@ -34,7 +34,7 @@ struct SettingsView: View {
             }
             .padding(16)
         }
-        .frame(width: 680, height: 340)
+        .frame(width: 600, height: 310)
     }
 
     private var fileDefaultsSection: some View {
@@ -72,19 +72,15 @@ struct SettingsView: View {
     private var behaviorSection: some View {
         GroupBox(strings.finderMenuBehaviorTitle) {
             VStack(alignment: .leading, spacing: 8) {
-                HStack(spacing: 24) {
-                    Toggle(strings.revealAfterCreate, isOn: $model.preferences.shouldRevealFile)
-                    Toggle(strings.preferSubmenu, isOn: $model.preferences.preferSubmenu)
-                }
-
                 Picker(strings.menuLanguage, selection: $model.preferences.menuLanguage) {
                     ForEach(MenuLanguage.allCases) { language in
                         Text(language.displayName).tag(language)
                     }
                 }
-                .pickerStyle(.segmented)
-                .frame(maxWidth: 300)
+                .pickerStyle(.menu)
+                .frame(maxWidth: 240)
             }
+            .padding(.vertical, 4)
             .frame(maxWidth: .infinity, alignment: .topLeading)
         }
     }

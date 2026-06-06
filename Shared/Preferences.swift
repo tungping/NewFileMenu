@@ -28,9 +28,7 @@ public struct NewFilePreferences: Equatable {
     public var defaultExtension: String
     public var defaultContent: String
     public var menuDisplayText: String
-    public var shouldRevealFile: Bool
     public var menuLanguage: MenuLanguage
-    public var preferSubmenu: Bool
 
     public init(
         monitoredFolderURLs: [URL] = [FileManager.default.homeDirectoryForCurrentUser],
@@ -38,18 +36,14 @@ public struct NewFilePreferences: Equatable {
         defaultExtension: String = Constants.defaultFileExtension,
         defaultContent: String = "",
         menuDisplayText: String = Constants.defaultMenuDisplayText,
-        shouldRevealFile: Bool = true,
-        menuLanguage: MenuLanguage = .simplifiedChinese,
-        preferSubmenu: Bool = false
+        menuLanguage: MenuLanguage = .simplifiedChinese
     ) {
         self.monitoredFolderURLs = monitoredFolderURLs
         self.defaultBaseName = defaultBaseName
         self.defaultExtension = defaultExtension
         self.defaultContent = defaultContent
         self.menuDisplayText = menuDisplayText
-        self.shouldRevealFile = shouldRevealFile
         self.menuLanguage = menuLanguage
-        self.preferSubmenu = preferSubmenu
     }
 }
 
@@ -61,9 +55,7 @@ public enum Preferences {
             Constants.PreferenceKeys.defaultExtension: Constants.defaultFileExtension,
             Constants.PreferenceKeys.defaultContent: "",
             Constants.PreferenceKeys.menuDisplayText: Constants.defaultMenuDisplayText,
-            Constants.PreferenceKeys.shouldRevealFile: true,
-            Constants.PreferenceKeys.menuLanguage: MenuLanguage.simplifiedChinese.rawValue,
-            Constants.PreferenceKeys.preferSubmenu: false
+            Constants.PreferenceKeys.menuLanguage: MenuLanguage.simplifiedChinese.rawValue
         ]
     }
 
@@ -99,9 +91,7 @@ public enum Preferences {
             defaultExtension: values[Constants.PreferenceKeys.defaultExtension] as? String ?? Constants.defaultFileExtension,
             defaultContent: values[Constants.PreferenceKeys.defaultContent] as? String ?? "",
             menuDisplayText: values[Constants.PreferenceKeys.menuDisplayText] as? String ?? Constants.defaultMenuDisplayText,
-            shouldRevealFile: values[Constants.PreferenceKeys.shouldRevealFile] as? Bool ?? true,
-            menuLanguage: language,
-            preferSubmenu: values[Constants.PreferenceKeys.preferSubmenu] as? Bool ?? false
+            menuLanguage: language
         )
     }
 
@@ -112,9 +102,7 @@ public enum Preferences {
             Constants.PreferenceKeys.defaultExtension: preferences.defaultExtension,
             Constants.PreferenceKeys.defaultContent: preferences.defaultContent,
             Constants.PreferenceKeys.menuDisplayText: preferences.menuDisplayText,
-            Constants.PreferenceKeys.shouldRevealFile: preferences.shouldRevealFile,
-            Constants.PreferenceKeys.menuLanguage: preferences.menuLanguage.rawValue,
-            Constants.PreferenceKeys.preferSubmenu: preferences.preferSubmenu
+            Constants.PreferenceKeys.menuLanguage: preferences.menuLanguage.rawValue
         ])
         NotificationCenter.default.post(name: Constants.Notifications.preferencesDidChange, object: nil)
     }
