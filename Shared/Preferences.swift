@@ -20,6 +20,20 @@ public enum MenuLanguage: String, CaseIterable, Identifiable {
             return "繁體中文"
         }
     }
+
+    public static var systemLanguage: MenuLanguage {
+        guard let preferredLanguage = Locale.preferredLanguages.first?.lowercased() else {
+            return .english
+        }
+        
+        if preferredLanguage.contains("zh-hans") {
+            return .simplifiedChinese
+        } else if preferredLanguage.contains("zh-hant") || preferredLanguage.contains("zh-hk") || preferredLanguage.contains("zh-tw") {
+            return .traditionalChinese
+        } else {
+            return .english
+        }
+    }
 }
 
 public struct NewFilePreferences: Equatable {
@@ -28,22 +42,19 @@ public struct NewFilePreferences: Equatable {
     public var defaultExtension: String
     public var defaultContent: String
     public var menuDisplayText: String
-    public var menuLanguage: MenuLanguage
 
     public init(
         monitoredFolderURLs: [URL] = [FileManager.default.homeDirectoryForCurrentUser],
         defaultBaseName: String = Constants.defaultBaseName,
         defaultExtension: String = Constants.defaultFileExtension,
         defaultContent: String = "",
-        menuDisplayText: String = Constants.defaultMenuDisplayText,
-        menuLanguage: MenuLanguage = .simplifiedChinese
+        menuDisplayText: String = Constants.defaultMenuDisplayText
     ) {
         self.monitoredFolderURLs = monitoredFolderURLs
         self.defaultBaseName = defaultBaseName
         self.defaultExtension = defaultExtension
         self.defaultContent = defaultContent
         self.menuDisplayText = menuDisplayText
-        self.menuLanguage = menuLanguage
     }
 }
 
@@ -54,8 +65,7 @@ public enum Preferences {
             Constants.PreferenceKeys.defaultBaseName: Constants.defaultBaseName,
             Constants.PreferenceKeys.defaultExtension: Constants.defaultFileExtension,
             Constants.PreferenceKeys.defaultContent: "",
-            Constants.PreferenceKeys.menuDisplayText: Constants.defaultMenuDisplayText,
-            Constants.PreferenceKeys.menuLanguage: MenuLanguage.simplifiedChinese.rawValue
+            Constants.PreferenceKeys.menuDisplayText: Constants.defaultMenuDisplayText
         ]
     }
 
@@ -82,16 +92,12 @@ public enum Preferences {
         let folders = (folderPaths ?? [UserDirectories.homeDirectory.path])
             .map { URL(fileURLWithPath: $0) }
 
-        let languageValue = values[Constants.PreferenceKeys.menuLanguage] as? String
-        let language = languageValue.flatMap(MenuLanguage.init(rawValue:)) ?? .simplifiedChinese
-
         return NewFilePreferences(
             monitoredFolderURLs: folders.isEmpty ? [UserDirectories.homeDirectory] : folders,
             defaultBaseName: values[Constants.PreferenceKeys.defaultBaseName] as? String ?? Constants.defaultBaseName,
             defaultExtension: values[Constants.PreferenceKeys.defaultExtension] as? String ?? Constants.defaultFileExtension,
             defaultContent: values[Constants.PreferenceKeys.defaultContent] as? String ?? "",
-            menuDisplayText: values[Constants.PreferenceKeys.menuDisplayText] as? String ?? Constants.defaultMenuDisplayText,
-            menuLanguage: language
+            menuDisplayText: values[Constants.PreferenceKeys.menuDisplayText] as? String ?? Constants.defaultMenuDisplayText
         )
     }
 
@@ -101,8 +107,7 @@ public enum Preferences {
             Constants.PreferenceKeys.defaultBaseName: preferences.defaultBaseName,
             Constants.PreferenceKeys.defaultExtension: preferences.defaultExtension,
             Constants.PreferenceKeys.defaultContent: preferences.defaultContent,
-            Constants.PreferenceKeys.menuDisplayText: preferences.menuDisplayText,
-            Constants.PreferenceKeys.menuLanguage: preferences.menuLanguage.rawValue
+            Constants.PreferenceKeys.menuDisplayText: preferences.menuDisplayText
         ])
         NotificationCenter.default.post(name: Constants.Notifications.preferencesDidChange, object: nil)
     }

@@ -7,7 +7,7 @@ struct SettingsView: View {
     @State private var selectedFolderURLs = Set<URL>()
 
     private var strings: AppStrings {
-        AppStrings(language: model.preferences.menuLanguage)
+        AppStrings(language: .systemLanguage)
     }
 
     var body: some View {
@@ -25,16 +25,12 @@ struct SettingsView: View {
                     strings: strings
                 )
 
-                HStack(alignment: .top, spacing: 12) {
-                    fileDefaultsSection
-                    behaviorSection
-                }
-
+                fileDefaultsSection
                 quitSection
             }
             .padding(16)
         }
-        .frame(width: 600, height: 310)
+        .frame(width: 440, height: 330)
     }
 
     private var fileDefaultsSection: some View {
@@ -65,23 +61,7 @@ struct SettingsView: View {
                 }
             }
             .padding(.vertical, 4)
-            .frame(maxWidth: .infinity, alignment: .topLeading)
-        }
-    }
-
-    private var behaviorSection: some View {
-        GroupBox(strings.finderMenuBehaviorTitle) {
-            VStack(alignment: .leading, spacing: 8) {
-                Picker(strings.menuLanguage, selection: $model.preferences.menuLanguage) {
-                    ForEach(MenuLanguage.allCases) { language in
-                        Text(language.displayName).tag(language)
-                    }
-                }
-                .pickerStyle(.menu)
-                .frame(maxWidth: 240)
-            }
-            .padding(.vertical, 4)
-            .frame(maxWidth: .infinity, alignment: .topLeading)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
@@ -115,7 +95,7 @@ final class SettingsViewModel: ObservableObject {
 
     func addFolder() {
         let panel = NSOpenPanel()
-        panel.title = AppStrings(language: preferences.menuLanguage).folderPanelTitle
+        panel.title = AppStrings(language: .systemLanguage).folderPanelTitle
         panel.canChooseFiles = false
         panel.canChooseDirectories = true
         panel.allowsMultipleSelection = true
