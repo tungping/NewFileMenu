@@ -34,7 +34,7 @@ struct SettingsView: View {
             }
             .padding(16)
         }
-        .frame(minWidth: 680, minHeight: 340)
+        .frame(width: 680, height: 340)
     }
 
     private var fileDefaultsSection: some View {
