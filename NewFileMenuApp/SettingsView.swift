@@ -12,7 +12,7 @@ struct SettingsView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
+            VStack(alignment: .leading, spacing: 12) {
                 statusSection
 
                 FolderListView(
@@ -32,14 +32,14 @@ struct SettingsView: View {
                 ExtensionHelpView(strings: strings)
                 quitSection
             }
-            .padding(24)
+            .padding(16)
         }
-        .frame(minWidth: 660, minHeight: 640)
+        .frame(minWidth: 560, minHeight: 500)
     }
 
     private var statusSection: some View {
         GroupBox(strings.statusTitle) {
-            Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 8) {
+            Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
                 GridRow {
                     Text("App Sandbox")
                         .foregroundStyle(.secondary)
@@ -64,20 +64,24 @@ struct SettingsView: View {
 
     private var fileDefaultsSection: some View {
         GroupBox(strings.fileDefaultsTitle) {
-            VStack(alignment: .leading, spacing: 12) {
-                TextField(strings.defaultBaseName, text: $model.preferences.defaultBaseName)
-                    .textFieldStyle(.roundedBorder)
+            VStack(alignment: .leading, spacing: 8) {
+                LabeledContent(strings.defaultBaseName) {
+                    TextField("", text: $model.preferences.defaultBaseName)
+                        .textFieldStyle(.roundedBorder)
+                }
 
-                TextField(strings.defaultExtension, text: $model.preferences.defaultExtension)
-                    .textFieldStyle(.roundedBorder)
+                LabeledContent(strings.defaultExtension) {
+                    TextField("", text: $model.preferences.defaultExtension)
+                        .textFieldStyle(.roundedBorder)
+                }
 
-                VStack(alignment: .leading, spacing: 6) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text(strings.defaultContent)
                         .font(.caption)
                         .foregroundStyle(.secondary)
                     TextEditor(text: $model.preferences.defaultContent)
                         .font(.body.monospaced())
-                        .frame(minHeight: 120)
+                        .frame(height: 80)
                         .overlay {
                             RoundedRectangle(cornerRadius: 6)
                                 .stroke(.separator, lineWidth: 1)
@@ -90,9 +94,11 @@ struct SettingsView: View {
 
     private var behaviorSection: some View {
         GroupBox(strings.finderMenuBehaviorTitle) {
-            VStack(alignment: .leading, spacing: 10) {
-                Toggle(strings.revealAfterCreate, isOn: $model.preferences.shouldRevealFile)
-                Toggle(strings.preferSubmenu, isOn: $model.preferences.preferSubmenu)
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 24) {
+                    Toggle(strings.revealAfterCreate, isOn: $model.preferences.shouldRevealFile)
+                    Toggle(strings.preferSubmenu, isOn: $model.preferences.preferSubmenu)
+                }
 
                 Picker(strings.menuLanguage, selection: $model.preferences.menuLanguage) {
                     ForEach(MenuLanguage.allCases) { language in

@@ -11,7 +11,7 @@ struct FolderListView: View {
 
     var body: some View {
         GroupBox(strings.monitoredFoldersTitle) {
-            VStack(spacing: 10) {
+            VStack(spacing: 8) {
                 List(selection: $selection) {
                     ForEach(folders, id: \.self) { folder in
                         Label(folder.path, systemImage: "folder")
@@ -19,7 +19,7 @@ struct FolderListView: View {
                             .tag(folder)
                     }
                 }
-                .frame(minHeight: 130)
+                .frame(minHeight: 95)
 
                 HStack {
                     Button(action: onAdd) {
