@@ -13,8 +13,6 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
-                statusSection
-
                 FolderListView(
                     folders: $model.preferences.monitoredFolderURLs,
                     selection: $selectedFolderURLs,
@@ -29,70 +27,41 @@ struct SettingsView: View {
 
                 fileDefaultsSection
                 behaviorSection
-                ExtensionHelpView(strings: strings)
                 quitSection
             }
             .padding(16)
         }
-        .frame(minWidth: 560, minHeight: 500)
-    }
-
-    private var statusSection: some View {
-        GroupBox(strings.statusTitle) {
-            Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
-                GridRow {
-                    Text("App Sandbox")
-                        .foregroundStyle(.secondary)
-                    Text("Off")
-                }
-
-                GridRow {
-                    Text("Finder Extension Sandbox")
-                        .foregroundStyle(.secondary)
-                    Text("On")
-                }
-
-                GridRow {
-                    Text("Mode")
-                        .foregroundStyle(.secondary)
-                    Text("Direct File Access")
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
+        .frame(minWidth: 500, minHeight: 400)
     }
 
     private var fileDefaultsSection: some View {
         GroupBox(strings.fileDefaultsTitle) {
-            VStack(alignment: .leading, spacing: 8) {
-                LabeledContent(strings.menuDisplayTextLabel) {
+            Grid(alignment: .leading, horizontalSpacing: 12, verticalSpacing: 8) {
+                GridRow {
+                    Text(strings.menuDisplayTextLabel)
+                        .foregroundStyle(.secondary)
                     TextField("", text: $model.preferences.menuDisplayText)
                         .textFieldStyle(.roundedBorder)
+                        .frame(width: 200)
                 }
 
-                LabeledContent(strings.defaultBaseName) {
+                GridRow {
+                    Text(strings.defaultBaseName)
+                        .foregroundStyle(.secondary)
                     TextField("", text: $model.preferences.defaultBaseName)
                         .textFieldStyle(.roundedBorder)
+                        .frame(width: 200)
                 }
 
-                LabeledContent(strings.defaultExtension) {
+                GridRow {
+                    Text(strings.defaultExtension)
+                        .foregroundStyle(.secondary)
                     TextField("", text: $model.preferences.defaultExtension)
                         .textFieldStyle(.roundedBorder)
-                }
-
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(strings.defaultContent)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                    TextEditor(text: $model.preferences.defaultContent)
-                        .font(.body.monospaced())
-                        .frame(height: 80)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 6)
-                                .stroke(.separator, lineWidth: 1)
-                        }
+                        .frame(width: 100)
                 }
             }
+            .padding(.vertical, 4)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
@@ -111,6 +80,7 @@ struct SettingsView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+                .frame(maxWidth: 300)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
