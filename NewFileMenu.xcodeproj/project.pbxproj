@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00000000000000000000020F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000020E /* Assets.xcassets */; };
 		000000000000000000000101 /* NewFileMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000201 /* NewFileMenuApp.swift */; };
 		000000000000000000000102 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000202 /* SettingsView.swift */; };
 		000000000000000000000103 /* FolderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000203 /* FolderListView.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00000000000000000000020E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000000000000000000000201 /* NewFileMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFileMenuApp.swift; sourceTree = "<group>"; };
 		000000000000000000000202 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		000000000000000000000203 /* FolderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		000000000000000000000010 /* NewFileMenuApp */ = {
 			isa = PBXGroup;
 			children = (
+				00000000000000000000020E /* Assets.xcassets */,
 				000000000000000000000201 /* NewFileMenuApp.swift */,
 				000000000000000000000202 /* SettingsView.swift */,
 				000000000000000000000203 /* FolderListView.swift */,
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00000000000000000000020F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +441,7 @@
 		000000000000000000000614 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NewFileMenuApp/NewFileMenu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -463,6 +468,7 @@
 		000000000000000000000615 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NewFileMenuApp/NewFileMenu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
