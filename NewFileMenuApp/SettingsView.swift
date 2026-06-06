@@ -25,13 +25,16 @@ struct SettingsView: View {
                     strings: strings
                 )
 
-                fileDefaultsSection
-                behaviorSection
+                HStack(alignment: .top, spacing: 12) {
+                    fileDefaultsSection
+                    behaviorSection
+                }
+
                 quitSection
             }
             .padding(16)
         }
-        .frame(minWidth: 500, minHeight: 400)
+        .frame(minWidth: 680, minHeight: 340)
     }
 
     private var fileDefaultsSection: some View {
@@ -42,7 +45,7 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                     TextField("", text: $model.preferences.menuDisplayText)
                         .textFieldStyle(.roundedBorder)
-                        .frame(width: 200)
+                        .frame(width: 160)
                 }
 
                 GridRow {
@@ -50,7 +53,7 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                     TextField("", text: $model.preferences.defaultBaseName)
                         .textFieldStyle(.roundedBorder)
-                        .frame(width: 200)
+                        .frame(width: 160)
                 }
 
                 GridRow {
@@ -58,11 +61,11 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                     TextField("", text: $model.preferences.defaultExtension)
                         .textFieldStyle(.roundedBorder)
-                        .frame(width: 100)
+                        .frame(width: 80)
                 }
             }
             .padding(.vertical, 4)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
         }
     }
 
@@ -82,7 +85,7 @@ struct SettingsView: View {
                 .pickerStyle(.segmented)
                 .frame(maxWidth: 300)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
         }
     }
 
